@@ -8,7 +8,7 @@ return {
     local mouse_scrolled = false
     for _, scroll in ipairs({ "Up", "Down" }) do
       local key = "<ScrollWheel" .. scroll .. ">"
-      vim.keymap.set({ "", "i" }, key, function()
+      vim.keymap.set({ "n", "i" }, key, function()
         mouse_scrolled = true
         return key
       end, { expr = true })
